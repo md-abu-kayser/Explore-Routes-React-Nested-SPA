@@ -98,4 +98,4 @@ Consider extracting API calls into a small service layer (e.g., src/services/use
 
 ##### Contact / Attribution
 
-This repository is a focused demo for modern React Router usage and can be used as a base for progressive enhancement, route-driven code splitting, and UX-focused data loading.
+This repository is a focused demo for modern React Router usage and can be used as a base for progressive enhancement, route-driven code splitting and UX-focused data loading.
