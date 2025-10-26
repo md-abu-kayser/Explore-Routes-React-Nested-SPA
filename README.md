@@ -1,39 +1,39 @@
-# explore-routes
+# Explore-Routes | React Nested SPA
 
 A compact React SPA demonstrating nested routing, data loaders, and component-driven layout using React Router v6. This project is a clean, production-ready sample suitable for showcasing modern React routing patterns and best practices.
 
 ## Key files and components
 
-- Application root: [`App`](src/App.js) — [src/App.js](src/App.js)
-- Layout container: [`Main`](src/layout/Main.js) — [src/layout/Main.js](src/layout/Main.js)
-- Header / navigation: [`Header`](src/components/Header/Header.js) — [src/components/Header/Header.js](src/components/Header/Header.js)
+- Application root: [`App`](src/App.js) - [src/App.js](src/App.js)
+- Layout container: [`Main`](src/layout/Main.js) - [src/layout/Main.js](src/layout/Main.js)
+- Header / navigation: [`Header`](src/components/Header/Header.js) - [src/components/Header/Header.js](src/components/Header/Header.js)
 - Pages and features:
-  - [`Home`](src/components/Home/Home.js) — [src/components/Home/Home.js](src/components/Home/Home.js)
-  - [`Products`](src/components/Products/Products.js) — [src/components/Products/Products.js](src/components/Products/Products.js)
-  - [`Friends`](src/components/Friends/Friends.js) — [src/components/Friends/Friends.js](src/components/Friends/Friends.js)
-  - [`Friend`](src/components/Friend/Friend.js) — [src/components/Friend/Friend.js](src/components/Friend/Friend.js)
-  - [`FriendDetails`](src/components/FriendDetails/FriendDetails.js) — [src/components/FriendDetails/FriendDetails.js](src/components/FriendDetails/FriendDetails.js)
-- Entrypoint: [`index`](src/index.js) — [src/index.js](src/index.js)
-- Build output (production): [`build/index.html`](build/index.html) — [build/index.html](build/index.html)
-- Metadata and scripts: [package.json](package.json) — [package.json](package.json)
+  - [`Home`](src/components/Home/Home.js) - [src/components/Home/Home.js](src/components/Home/Home.js)
+  - [`Products`](src/components/Products/Products.js) - [src/components/Products/Products.js](src/components/Products/Products.js)
+  - [`Friends`](src/components/Friends/Friends.js) - [src/components/Friends/Friends.js](src/components/Friends/Friends.js)
+  - [`Friend`](src/components/Friend/Friend.js) - [src/components/Friend/Friend.js](src/components/Friend/Friend.js)
+  - [`FriendDetails`](src/components/FriendDetails/FriendDetails.js) - [src/components/FriendDetails/FriendDetails.js](src/components/FriendDetails/FriendDetails.js)
+- Entrypoint: [`index`](src/index.js) - [src/index.js](src/index.js)
+- Build output (production): [`build/index.html`](build/index.html) - [build/index.html](build/index.html)
+- Metadata and scripts: [package.json](package.json) - [package.json](package.json)
 
-## Project overview
+## Project Overview
 
-### explore-routes is built with Create React App and demonstrates:
+### Explore-Routes Is Built With Create React App:
 
 - Nested layout with an application shell (`Main`) and an `Outlet` for nested routes.
 - Declarative route definitions using `createBrowserRouter` and `RouterProvider` in [`App`](src/App.js).
 - Data loading with route loaders (fetching users from jsonplaceholder) in [`App`](src/App.js) and consumption in [`Friends`](src/components/Friends/Friends.js) and [`FriendDetails`](src/components/FriendDetails/FriendDetails.js).
 - Minimal, component-focused styling (see [`Header.css`](src/components/Header/Header.css) and [`Friend.css`](src/components/Friend/Friend.css)).
 
-## Routing and data loading (high level)
+## Routing and data loading---> High Level
 
 - Root layout: path `/` → [`Main`](src/layout/Main.js).
 - Child routes are defined in [`App`](src/App.js):
   - `/` and `/home` → [`Home`](src/components/Home/Home.js)
   - `/products` → [`Products`](src/components/Products/Products.js)
-  - `/friends` → [`Friends`](src/components/Friends/Friends.js) — loader fetches users from https://jsonplaceholder.typicode.com/users
-  - `/friend/:friendId` → [`FriendDetails`](src/components/FriendDetails/FriendDetails.js) — loader fetches single user by id
+  - `/friends` → [`Friends`](src/components/Friends/Friends.js) - loader fetches users from https://jsonplaceholder.typicode.com/users
+  - `/friend/:friendId` → [`FriendDetails`](src/components/FriendDetails/FriendDetails.js) - loader fetches single user by id
 
 ### Why this is production-proof
 
@@ -41,7 +41,7 @@ A compact React SPA demonstrating nested routing, data loaders, and component-dr
 - The project uses Create React App defaults for build and optimization: see [package.json](package.json) scripts (`start`, `build`, `test`).
 - Clear component boundaries (Header, pages, small presentational components) ease maintainability and future extension.
 
-### Getting started (developer quickstart)
+### Getting started------> developer quickstart
 
 ##### To run locally:
 
@@ -53,28 +53,28 @@ npm install
 
 npm start
 
-### Available scripts (from package.json)
+#### Available scripts (from package.json)
 
-npm start — start dev server with hot reload
-npm run build — production build (output to build/) — see build/index.html
-npm test — run test runner
+npm start - start dev server with hot reload
+npm run build - production build (output to build/) - see build/index.html
+npm test - run test runner
 
-### Testing
+#### Testing
 
 Basic test scaffold is present in src/App.test.js. Unit and integration tests can be added with @testing-library/react. Test setup uses src/setupTests.js.
 
-### Quality, structure, and extensibility
+#### Quality, Structure and Extensibility
 
 Single responsibility components: each page and UI element lives under src/components/\*.
 Centralized layout: Main holds shared UI (header) and outlet for nested pages.
-Clear separation of data and presentation — loaders return fetch responses that components consume with useLoaderData.
+Clear separation of data and presentation - loaders return fetch responses that components consume with useLoaderData.
 
-### Deployment
+#### Deployment
 
 Production-ready static output is generated by npm run build and served from the build/ folder. The production manifest and static assets are under build/manifest.json and build/static/.
 The app uses client-side routing; for most static hosts configure fallback to index.html to support deep linking (see public/index.html).
 
-#### Files of interest
+#### Files Of Interest
 
 src/App.js
 src/layout/Main.js
@@ -86,16 +86,13 @@ src/components/FriendDetails/FriendDetails.js
 package.json
 .gitignore
 
-#### Notes for maintainers
+#### Notes For Maintainers
 
 The route loaders currently return fetch Responses directly. Consider parsing JSON in the loader to centralize error handling and to provide consistent data shapes to components.
 Replace the demo API (jsonplaceholder) with your production API and add authentication/authorization middleware as needed.
 Consider extracting API calls into a small service layer (e.g., src/services/users.js) for testability and reuse.
 
-#### License
+##### Contact | Attribution
 
-- MIT (add LICENSE file if publishing publicly).
-
-##### Contact / Attribution
-
-This repository is a focused demo for modern React Router usage and can be used as a base for progressive enhancement, route-driven code splitting and UX-focused data loading.
+**Email:** abu.kayser.official@gmail.com
+**This repository is a focused demo for modern React Router usage and can be used as a base for progressive enhancement, route-driven code splitting and UX-focused data loading.**
