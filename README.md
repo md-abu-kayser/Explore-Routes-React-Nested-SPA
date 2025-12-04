@@ -1,4 +1,4 @@
-# Explore-Routes | React Nested SPA
+# Explore-Routes - Production-Ready React Nested SPA
 
 A compact React SPA demonstrating nested routing, data loaders, and component-driven layout using React Router v6. This project is a clean, production-ready sample suitable for showcasing modern React routing patterns and best practices.
 
