@@ -43,21 +43,21 @@ A compact React SPA demonstrating nested routing, data loaders, and component-dr
 
 ## Getting started------> developer quickstart
 
-1. To run locally:
-
-- Install dependencies
+1. **To run locally and Install dependencies:**
 
 ```bash
 npm install
-```
-
-### Start development server
 
 ```
+
+2. **Start development server:**
+
+```bash
 npm start
+
 ```
 
-### Available scripts (from package.json)
+3. **Available scripts (from package.json)**
 
 - npm start - start dev server with hot reload
 - npm run build - production build (output to build/) - see build/index.html
