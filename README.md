@@ -19,14 +19,14 @@ A compact React SPA demonstrating nested routing, data loaders, and component-dr
 
 ## Project Overview
 
-### Explore-Routes Is Built With Create React App:
+1. **Explore-Routes Is Built With Create React App:**
 
 - Nested layout with an application shell (`Main`) and an `Outlet` for nested routes.
 - Declarative route definitions using `createBrowserRouter` and `RouterProvider` in [`App`](src/App.js).
 - Data loading with route loaders (fetching users from jsonplaceholder) in [`App`](src/App.js) and consumption in [`Friends`](src/components/Friends/Friends.js) and [`FriendDetails`](src/components/FriendDetails/FriendDetails.js).
 - Minimal, component-focused styling (see [`Header.css`](src/components/Header/Header.css) and [`Friend.css`](src/components/Friend/Friend.css)).
 
-## Routing and data loading---> High Level
+2. **Routing and data loading---> High Level**
 
 - Root layout: path `/` → [`Main`](src/layout/Main.js).
 - Child routes are defined in [`App`](src/App.js):
@@ -35,19 +35,19 @@ A compact React SPA demonstrating nested routing, data loaders, and component-dr
   - `/friends` → [`Friends`](src/components/Friends/Friends.js) - loader fetches users from https://jsonplaceholder.typicode.com/users
   - `/friend/:friendId` → [`FriendDetails`](src/components/FriendDetails/FriendDetails.js) - loader fetches single user by id
 
-### Why this is production-proof
+3. **Why this is production-proof:**
 
 - Route-based loaders keep data fetching colocated with routes for predictable behavior and better UX.
 - The project uses Create React App defaults for build and optimization: see [package.json](package.json) scripts (`start`, `build`, `test`).
 - Clear component boundaries (Header, pages, small presentational components) ease maintainability and future extension.
 
-### Getting started------> developer quickstart
+## Getting started------> developer quickstart
 
 1. To run locally:
 
-### Install dependencies
+- Install dependencies
 
-```
+```bash
 npm install
 ```
 
@@ -106,7 +106,7 @@ The app uses client-side routing; for most static hosts configure fallback to in
   Consider extracting API calls into a small service layer (src/services/users.js) for testability and reuse.
 
 - **_Name:_** Md Abu Kayser - Full-Stack Engineer
-- **_Project:_** _Explore-Routes-React-Nested-SPA_
+- **_Project:_** _route-driven-spa_
 - **_Maintainer:_** [md-abu-kayser](https://github.com/md-abu-kayser)
 - **_GitHub:_** [github.com/abu.kayser-official](https://github.com/md-abu-kayser)
 - **_Email:_** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)
